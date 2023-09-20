@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using net918.Models;
 
-namespace net918.DataContext
+namespace net918.Data
 {
     public class DataContext: DbContext
     {

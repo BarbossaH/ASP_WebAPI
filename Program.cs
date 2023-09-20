@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using net918.DataContext;
+using net918.Data;
 using PokemonReviewApp;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,10 +23,10 @@ void SeedData(IHost app)
 {
     var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
 
-    using (var scope = scopedFactory.CreateScope())
+    using (var scope = scopedFactory?.CreateScope())
     {
-        var service = scope.ServiceProvider.GetService<Seed>();
-        service.SeedDataContext();
+        var service = scope?.ServiceProvider.GetService<Seed>();
+        service?.SeedDataContext();
     }
 }
 

@@ -1,6 +1,6 @@
 
 
-using net918.DataContext;
+using net918.Data;
 using net918.Models;
 
 namespace PokemonReviewApp
